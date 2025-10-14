@@ -36,6 +36,7 @@ path = "actix-web/hello-world"
 use_cases = ["Web app"]
 tags = ["actix-web"]
 template = "actix-web"
+has_template_repo = true
 
 [starters.axum-hello-world]
 title = "Axum"
@@ -44,6 +45,7 @@ path = "axum/hello-world"
 use_cases = ["Web app"]
 tags = ["axum"]
 template = "axum"
+has_template_repo = true
 
 [starters.bevy-hello-world]
 title = "Bevy"
@@ -51,6 +53,7 @@ description = "Data driven game engine that compiles to WASM"
 path = "bevy/hello-world"
 use_cases = ["Web app", "Game"]
 tags = ["bevy", "axum"]
+has_template_repo = true
 
 [starters.loco-hello-world]
 title = "Loco"
@@ -59,6 +62,7 @@ path = "loco/hello-world"
 use_cases = ["Web app"]
 tags = ["loco"]
 template = "loco"
+has_template_repo = true
 
 [starters.poem-hello-world]
 title = "Poem"
@@ -91,6 +95,7 @@ path = "rocket/hello-world"
 use_cases = ["Web app"]
 tags = ["rocket"]
 template = "rocket"
+has_template_repo = true
 
 [starters.salvo-hello-world]
 title = "Salvo"
@@ -232,6 +237,7 @@ description = "CRUD API, Postgres database, and static file server combined into
 path = "axum/todo-list"
 use_cases = ["Web app", "Storage"]
 tags = ["axum", "postgres", "database"]
+has_template_repo = true
 
 [templates.axum-todo-app]
 title = "Todo app"
@@ -267,6 +273,7 @@ description = "Health monitoring service using websockets"
 path = "axum/websocket"
 use_cases = ["Web app", "Monitoring"]
 tags = ["axum", "websocket"]
+has_template_repo = true
 
 [templates.axum-next-fullstack-saas]
 title = "Fullstack SaaS"
@@ -274,6 +281,7 @@ description = "Opinionated fullstack web app with pre-made routes and assets"
 path = "fullstack-templates/saas"
 use_cases = ["Web app", "Authentication", "Storage", "Monetization"]
 tags = ["nextjs", "axum", "database", "postgres", "typescript", "tailwind"]
+has_template_repo = true
 
 [templates.rama-hello-world-tcp]
 title = "Rama TCP"
@@ -337,6 +345,7 @@ description = "Use the image library to rescale the Shuttle logo"
 path = "salvo/image-rescaler"
 use_cases = ["Web app", "Image processing"]
 tags = ["salvo", "image"]
+has_template_repo = true
 
 [templates.serenity-postgres]
 title = "Postgres"
@@ -372,6 +381,7 @@ description = "Model Context Protocol server with Server-Sent Events transport"
 path = "mcp/mcp-sse"
 use_cases = ["Web app", "MCP"]
 tags = ["axum", "mcp", "sse"]
+has_template_repo = true
 
 [templates.mcp-sse-oauth]
 title = "SSE MCP Server with OAuth"
