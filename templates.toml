@@ -390,6 +390,13 @@ path = "mcp/mcp-sse-oauth"
 use_cases = ["MCP", "AI", "AI Agents"]
 tags = ["axum", "mcp", "sse", "oauth"]
 
+[templates.iad-todos]
+title = "Rust Todo List with IaD Postgres"
+description = "Todo list with a Postgres database provisioned by Infrastructure as Data"
+path = "iad/todos"
+use_cases = ["Web app", "IaD", "Storage"]
+tags = ["axum", "postgres", "database", "iad"]
+
 ## EXAMPLES ##
 
 [examples.metadata]
