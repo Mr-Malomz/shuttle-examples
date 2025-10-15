@@ -1,4 +1,6 @@
 CREATE TABLE IF NOT EXISTS todos (
   id serial PRIMARY KEY,
-  note TEXT NOT NULL
+  note TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  completed BOOLEAN NOT NULL DEFAULT FALSE
 );

@@ -26,10 +26,14 @@ async fn add(
     State(state): State<MyState>,
     Json(data): Json<TodoNew>,
 ) -> Result<impl IntoResponse, impl IntoResponse> {
-    match sqlx::query_as::<_, Todo>("INSERT INTO todos (note) VALUES ($1) RETURNING id, note")
-        .bind(&data.note)
-        .fetch_one(&state.pool)
-        .await
+    match sqlx::query_as::<_, Todo>(
+        "INSERT INTO todos (note) VALUES ($1) RETURNING id, note, description, completed",
+    )
+    .bind(&data.note)
+    .bind(&data.description)
+    .bind(data.completed)
+    .fetch_one(&state.pool)
+    .await
     {
         Ok(todo) => Ok((StatusCode::CREATED, Json(todo))),
         Err(e) => Err((StatusCode::BAD_REQUEST, e.to_string())),
@@ -60,10 +64,14 @@ async fn main(#[shuttle_shared_db::Postgres] pool: PgPool) -> shuttle_axum::Shut
 #[derive(Deserialize)]
 struct TodoNew {
     pub note: String,
+    pub description: String,
+    pub completed: bool,
 }
 
 #[derive(Serialize, FromRow)]
 struct Todo {
     pub id: i32,
     pub note: String,
+    pub description: String,
+    pub completed: bool,
 }
