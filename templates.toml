@@ -403,6 +403,12 @@ description = "Upload manager API to manage S3 artifacts with AWS RDS Postgres d
 path = "iad/upload-manager"
 use_cases = ["Web app", "IaD", "Storage"]
 tags = ["axum", "postgres", "database", "iad"]
+[templates.mcp-http-stream]
+title = "Streamable HTTP MCP Server"
+description = "Model Context Protocol server with HTTP streaming transport"
+path = "mcp/http-stream-mcp"
+use_cases = ["MCP", "AI", "AI Agents"]
+tags = ["axum", "mcp", "http-stream"]
 
 ## EXAMPLES ##
 
